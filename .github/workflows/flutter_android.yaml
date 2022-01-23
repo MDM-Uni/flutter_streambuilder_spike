@@ -8,11 +8,7 @@ on:
 
 jobs:
   build:
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        os: [ubuntu-latest, macos-latest, windows-latest]
-        architecture: [x64, arm64]
+    runs-on: macos-latest
     steps:
       - uses: actions/checkout@v2
 
@@ -22,7 +18,7 @@ jobs:
       - uses: dart-lang/setup-dart@v1
         with:
           sdk: 2.14.4
-          architecture: ${{ matrix.architecture }}     
+          architecture: arm64    
       # Build Android APK and app bundle
       - uses: actions/setup-java@v2
         with:

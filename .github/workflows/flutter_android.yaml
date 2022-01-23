@@ -18,7 +18,7 @@ jobs:
       - uses: dart-lang/setup-dart@v1
         with:
           sdk: 2.14.4
-          architecture: arm64    
+          architecture: x64    
       # Build Android APK and app bundle
       - uses: actions/setup-java@v2
         with:
